@@ -1,0 +1,294 @@
+html, body{
+    overflow-x: hidden;
+}
+body{
+    background: #fff;
+    color: #1f2937;
+}
+body{
+    margin:0;
+    background:transparent;
+}
+
+.body-video {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+body.home-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 45, 25, 0.45);
+    z-index: -1;
+}
+
+
+
+
+
+
+
+.navbar-brand{
+    font-size: 21px;
+}
+.nav-link{
+    color: #374151 !important;
+}
+.nav-link:hover, .nav-link.active{
+    color: #2f6b3f !important;
+}
+.hero-section{
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-section img{
+    width: 100%;
+    display: block;
+}
+.hero{
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+}
+.hero-img{
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    display: block;
+}
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 560px;
+    color: white;
+}
+.hero-label{
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.hero h1{
+    font-size: 52px;
+    font-weight: 700;
+    margin: 12px 0;
+}
+.hero p{
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+.hero-buttons.btn{
+    padding: 11px 22px;
+    margin-right: 8px;
+}
+.section-heading{
+    text-align: center;
+    margin-bottom: 35px;
+}
+.section-heading span{
+    color: #2f6b3f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.section-heading h2{
+    font-weight: 700;
+    margin: 7px 0;
+}
+.section-heading p{
+    color: #6b7280;
+    margin: 0;
+}
+.market-card, .product-card, .step-card{
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    transition: .2s;
+}
+.market-card{
+    padding: 25px;
+    height: 100%;
+}
+.market-card:hover, .product-card:hover, .step-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,.07);
+
+}
+.market-icon, .step-icon{
+    width: 50px;
+    height: 50px;
+    background: #e0e7ff;
+    color: #2f6b3f;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+.market-card h5{
+    font-weight: 700;
+}
+.market-card p, .product-info p, .step-card p{
+    color: #6b7280;
+}
+.market-card a{
+    color: #2f6b3f;
+    text-decoration: none;
+    font-weight: 600;
+}
+.market-image{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+.market-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.products-section{
+    background: #f7f5ef;
+}
+.product-card {
+    overflow: hidden;
+    height: 100%;
+}
+.product-image{
+    height: 180px;
+    background: #e0e7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2f6b3f;
+    font-size: 55px;
+}
+.product-info{
+    padding: 20px;
+}
+.product-info small{
+    color: #f97316;
+    font-weight: 600;
+}
+.product-info h5{
+    font-weight: 700;
+    margin-top: 6px;
+}
+.product-info strong{
+    color: #2f6b3f;
+}
+.step-card{
+    padding: 28px 20px;
+    height: 100%;
+}
+.step-icon{
+    margin: 0 auto 18px;
+}
+.step-card h5{
+    font-weight: 700;
+}
+.footer{
+    background: #1f4d2e;
+    color: #e0e7ff;
+}
+.footer h5{
+    color: white;
+    font-size: 21px;
+}
+.footer h5 span{
+    color: #fdba74;
+}
+.footerh6{
+    color: white;
+    margin-bottom: 15px;
+}
+.footer a{
+    display: block;
+    color: #e0e7ff;
+    text-decoration: none;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+.footer a:hover{
+    color: white;
+}
+.footer p{
+    font-size: 14px;
+}
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,.12);
+}
+@media (max-width: 768px){
+    .hero, .hero-img{
+        min-height: 500px;
+        height: 500px;
+    }
+    .hero-content{
+        left: 6%;
+        right: 6%;
+    }
+    .hero h1{
+        font-size: 38px;
+    }
+    .hero p{
+        font-size: 16px;
+    }
+
+}
+
+/*** Fruits Start ***/
+.fruite .tab-class .nav-item a.active {
+    background: var(--bs-secondary) !important;
+}
+
+.fruite .tab-class .nav-item a.active span {
+    color: var(--bs-white) !important; 
+}
+
+.fruite .fruite-categorie .fruite-name {
+    line-height: 40px;
+}
+
+.fruite .fruite-categorie .fruite-name a {
+    transition: 0.5s;
+}
+
+.fruite .fruite-categorie .fruite-name a:hover {
+    color: var(--bs-secondary);
+}
+
+.fruite .fruite-item {
+    height: 100%;
+    transition: 0.5s;
+}
+.fruite .fruite-item:hover {
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.4);
+}
+
+.fruite .fruite-item .fruite-img {
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px 10px 0 0;
+}
+
+.fruite .fruite-item .fruite-img img {
+    transition: 0.5s;
+}
+
+.fruite .fruite-item .fruite-img img:hover {
+    transform: scale(1.3);
+}
+/*** Fruits End ***/

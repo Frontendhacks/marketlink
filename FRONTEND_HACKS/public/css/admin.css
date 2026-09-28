@@ -1,0 +1,73 @@
+/* MarketLink Admin – shared component styles (layout/sidebar live in admin/master.blade.php) */
+.alert-box{padding:12px 16px;border-radius:8px;margin-bottom:18px;font-size:14px}
+.alert-box.success{background:#d4edda;color:#155724;border:1px solid #c3e6cb}
+.alert-box.error{background:#f8d7da;color:#721c24;border:1px solid #f5c6cb}
+.alert-box ul{margin:0;padding-left:18px}
+
+.page-header{margin-bottom:22px}
+.page-header h1{margin:0 0 4px;font-size:26px;color:#1b4332}
+.page-header p{margin:0;color:#6b7280}
+
+.stats-grid.cols-4{grid-template-columns:repeat(4,1fr)}
+.stats-grid.cols-5{grid-template-columns:repeat(5,1fr)}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:16px}
+.toolbar form{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.toolbar input[type=text],.toolbar select,.form-grid input,.form-grid select,.form-grid textarea,.inline-form select{
+  padding:9px 12px;border:1px solid #d1d5db;border-radius:7px;font-size:14px;background:#fff;outline:none;font-family:inherit}
+.toolbar input[type=text]{min-width:230px}
+.toolbar input:focus,.toolbar select:focus,.form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{border-color:#4caf50;box-shadow:0 0 0 3px rgba(76,175,80,.15)}
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tabs a{padding:7px 14px;border-radius:20px;background:#fff;border:1px solid #e5e7eb;color:#4b5563;font-size:13px;font-weight:600}
+.tabs a.active,.tabs a:hover{background:#4caf50;border-color:#4caf50;color:#fff}
+
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:none;border-radius:7px;font-size:13px;font-weight:600;cursor:pointer;color:#fff;background:#4caf50;font-family:inherit}
+.btn:hover{filter:brightness(.95)}
+.btn.sm{padding:6px 10px;font-size:12px}
+.btn.secondary{background:#6b7280}.btn.warning{background:#f59e0b}.btn.danger{background:#dc2626}.btn.info{background:#2563eb}.btn.light{background:#eef2f7;color:#374151}
+.row-actions{display:flex;gap:6px;flex-wrap:wrap}
+.row-actions form{margin:0}
+
+.badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:600;background:#eef2f7;color:#374151}
+.badge.pending{background:#fff3cd;color:#856404}
+.badge.approved,.badge.active,.badge.confirmed{background:#d4edda;color:#155724}
+.badge.rejected,.badge.cancelled,.badge.suspended{background:#f8d7da;color:#721c24}
+.badge.inactive{background:#e5e7eb;color:#374151}
+.badge.completed{background:#d1ecf1;color:#0c5460}
+
+.thumb{width:44px;height:44px;border-radius:8px;object-fit:cover;background:#f3f4f6}
+.cell-user{display:flex;align-items:center;gap:10px}
+.avatar{width:38px;height:38px;border-radius:50%;background:#4caf50;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none}
+.muted{color:#6b7280;font-size:12px}
+.table-wrap{overflow-x:auto}
+.empty{text-align:center;color:#9ca3af;padding:28px!important}
+
+.pagination{display:flex;gap:6px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
+.pagination a,.pagination span{padding:6px 12px;border:1px solid #e5e7eb;border-radius:6px;font-size:13px;background:#fff;color:#374151}
+.pagination .current{background:#4caf50;border-color:#4caf50;color:#fff}
+.pagination .disabled{color:#c0c4cc}
+
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;z-index:2000;padding:16px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:12px;width:640px;max-width:100%;max-height:92vh;overflow:auto;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.modal-box h3{margin:0 0 16px;color:#1b4332}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-grid .full{grid-column:1/-1}
+.form-grid label{display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:5px}
+.form-grid input,.form-grid select,.form-grid textarea{width:100%}
+.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+
+.detail-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 24px}
+.detail-list p{margin:0;font-size:14px;color:#374151}
+.detail-list b{color:#1b4332}
+
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px}
+.bar-row .label{width:90px;color:#4b5563}
+.bar-row .bar{flex:1;background:#eef2f7;border-radius:6px;height:12px;overflow:hidden}
+.bar-row .bar i{display:block;height:100%;background:#4caf50}
+.bar-row .value{width:110px;text-align:right;font-weight:600;color:#1b4332}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+@media (max-width:1100px){.stats-grid,.stats-grid.cols-4,.stats-grid.cols-5{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}}
+@media (max-width:640px){.stats-grid,.stats-grid.cols-4,.stats-grid.cols-5{grid-template-columns:1fr}.form-grid,.detail-list{grid-template-columns:1fr}.toolbar input[type=text]{min-width:0;width:100%}}

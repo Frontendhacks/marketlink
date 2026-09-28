@@ -1,0 +1,25 @@
+body {
+    background: #f7f5ef;
+    color: #1f2937;
+}
+
+.login-box {
+    background: white;
+    border-radius: 15px;
+}
+
+.btn-main {
+    background: #2f6b3f;
+    color: white;
+}
+
+.btn-main:hover {
+    background: #1f4d2e;
+    color: white;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}

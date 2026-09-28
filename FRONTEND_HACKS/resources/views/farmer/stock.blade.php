@@ -1,0 +1,7 @@
+@extends('farmer.master')
+@section('title','Farmer Stock')
+@section('main')
+<div class="d-flex justify-content-between align-items-center mb-4"><div><h1 class="fw-bold">Stock</h1><p class="text-muted">Live stock for your products.</p></div><a href="{{ route('farmer.products') }}" class="btn btn-success">Manage Products</a></div>
+<div class="row g-3 mb-4"><div class="col-md-4"><div class="card border-0 shadow-sm"><div class="card-body"><small>Total Stock</small><h2>{{ $products->sum('stock_quantity') }}</h2></div></div></div><div class="col-md-4"><div class="card border-0 shadow-sm"><div class="card-body"><small>Low Stock</small><h2>{{ $products->where('stock_quantity','<=',10)->where('stock_quantity','>',0)->count() }}</h2></div></div></div><div class="col-md-4"><div class="card border-0 shadow-sm"><div class="card-body"><small>Out of Stock</small><h2>{{ $products->where('stock_quantity',0)->count() }}</h2></div></div></div></div>
+<div class="card border-0 shadow-sm"><div class="card-body"><div class="table-responsive"><table class="table"><thead><tr><th>Product</th><th>Category</th><th>Stock</th><th>Price</th><th>Status</th></tr></thead><tbody>@forelse($products as $product)<tr><td>{{ $product->name }}</td><td>{{ $product->category->name ?? '—' }}</td><td>{{ $product->stock_quantity }}</td><td>Rs. {{ number_format($product->price,2) }}</td><td>{{ ucfirst($product->status) }}</td></tr>@empty<tr><td colspan="5">No products.</td></tr>@endforelse</tbody></table></div></div></div>
+@endsection

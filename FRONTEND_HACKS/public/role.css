@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef6ef, #fff7e8);
+    color: #26352a
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 55px 0
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #1f4d2e;
+    margin-bottom: 45px
+}
+
+.brand img {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    border-radius: 12px
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 38px
+}
+
+.tag {
+    color: #2f6b3f;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 0 0 10px;
+    font-weight: 800;
+    color: #1f4d2e
+}
+
+.sub {
+    font-size: 17px;
+    color: #647066;
+    margin: 0
+}
+
+.role-card {
+    display: block;
+    height: 100%;
+    padding: 34px 28px;
+    text-decoration: none;
+    text-align: center;
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid #dbe8dc;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(31, 77, 46, .08);
+    transition: .25s;
+    color: #26352a
+}
+
+.role-card:hover {
+    transform: translateY(-8px);
+    border-color: #2f6b3f;
+    box-shadow: 0 18px 38px rgba(31, 77, 46, .15)
+}
+
+.icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    background: #e8f2e9;
+    font-size: 34px
+}
+
+.role-card h2 {
+    color: #1f4d2e;
+    font-size: 25px;
+    margin-bottom: 12px
+}
+
+.role-card p {
+    color: #69736c;
+    min-height: 50px;
+    line-height: 1.6
+}
+
+.role-card span {
+    display: inline-block;
+    margin-top: 15px;
+    color: #d97706;
+    font-weight: 700
+}
+
+.role-card:hover span {
+    color: #b45309
+}
+
+@media(max-width:767px) {
+    .page {
+        padding: 35px 15px
+    }
+
+    .hero h1 {
+        font-size: 32px
+    }
+
+    .brand {
+        margin-bottom: 30px
+    }
+
+    .role-card {
+        padding: 28px 22px
+    }
+}

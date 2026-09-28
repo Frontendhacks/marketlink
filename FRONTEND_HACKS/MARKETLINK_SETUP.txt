@@ -1,0 +1,22 @@
+MARKETLINK - SETUP & WORKFLOW
+
+1. Configure .env (MySQL: DB_DATABASE=marketlink_db) and create the empty database.
+2. php artisan migrate --seed        (fresh install: php artisan migrate:fresh --seed)
+3. php artisan storage:link          (needed to show uploaded product images)
+4. php artisan serve  (or run through WAMP/Apache, document root = /public)
+
+Accounts created by the seeder
+  Admin     admin@marketlink.com            / admin12345      -> /admin/login
+  Farmers   ali.farmer@marketlink.com       / farmer12345     (approved)  -> /farmer/login
+            sara.farmer@marketlink.com      / farmer12345     (approved)
+            hassan.farmer@marketlink.com    / farmer12345     (approved)
+            pending.farmer@marketlink.com   / farmer12345     (PENDING - cannot log in until approved)
+  Customers ahmed.customer@marketlink.com   / customer12345   -> /login
+
+Farmer approval workflow
+  Register (/farmer/register) -> status "pending" -> login refused with a "waiting for admin approval" message
+  -> Admin > Farmers > Approve -> status "approved" -> farmer logs in and reaches /farmer/dashboard.
+  Statuses: pending, approved, rejected, inactive (stored in users.approval_status, mirrored to farmer_profiles.status).
+  Every /farmer/* route is guarded server-side by the "farmer.approved" middleware, so typing a URL does not bypass it.
+
+Tests: php artisan test   (tests/Feature/FarmerApprovalWorkflowTest.php)
